@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="grey darken-4" style="padding: 0px 10px; ">
+        <div class="nav-wrapper">
+            <a href="home.html" class="brand-logo" style="margin-left: 15px">ODS</a>
+
+            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                <i class="material-icons">menu</i>
+            </a>
+
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <div class="input-field">
+                        <a href="javascript:deslogar('deslogar');" class="waves-effect waves-light btn grey darken-4"><i
+                                class="material-icons left">person</i>Deslogar</a>
+                    </div>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="residente.html">Residente</a></li>
+                <li><a href="endereco.html">Endereço</a></li>
+            </ul>
+        </div>
+
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="home.html">Início</a></li>
+            <hr>
+            <li><a href="residente.html">Residente</a></li>
+            <hr>
+            <li><a href="endereco.html">Endereço</a></li>
+            <hr>
+            <li>
+                <div class="input-field" style="margin-left: 50px">
+                    <a href="javascript:deslogar('deslogar');" class="waves-effect waves-light btn grey darken-4"><i
+                            class="material-icons left">person</i>Deslogar</a>
+                </div>
+        </ul>
+        <br>
+    </nav>
+
+
+
+    <main class="container">
+        <div class="row">
+            <form id="formulario" class="col s12">
+                <div class="campo">
+                    <input type="hidden" name="txtidresidente" id="txtidresidente" value="novo registro">
+                </div>
+
+                <div class="input-field col s12">
+                    <label for="txtnome"><strong> Nome</strong></label>
+                    <input type="text" name="txtnome" id="txtnome" required>
+                </div>
+
+                <div class="input-field col s6">
+                    <label for="txtidade"><strong> Idade</strong></label>
+                    <input type="text" name="txtidade" id="txtidade" required>
+                </div>
+
+                <div class="input-field col s6">
+                    <label for="txttrabalho"><strong> Trabalhando?</strong></label>
+                    <input type="text" name="txttrabalho" id="txttrabalho" required>
+                </div>
+
+                <div class="input-field col s6">
+                    <label for="txttelefone"><strong> Número do Telefone</strong></label>
+                    <input type="text" name="txttelefone" id="txttelefone" required>
+                </div>
+                <div class="input-field col s6">
+                    <label for="txtqt_pessoas"><strong> Quantos Moradores? </strong></label>
+                    <input type="text" name="txtqt_pessoas" id="txtqt_pessoas" required>
+                </div>
+                </fieldset>
+
+                <div class="input-field col s12">
+                    <div class="row">
+                        <button name="btncadastrar" class="waves-effect waves-light btn col-content grey darken-4 s6"><i
+                                class="material-icons left">add</i>Cadastrar</button>
+                        <button type="reset" class="waves-effect waves-light btn grey darken-4  col-content s6"><i
+                                class="material-icons left">cancel</i>Cancelar</span>
+                    </div>
+                </div>
+            </form>
+            
+
+            <h1 style="text-align: center;">Listagem</h1>
+            <div class="input-field col s12">
+                <label for="txtfiltrar" style="font-size: 15px;">Filtrar pelo Nome:</label>
+                <input type="text" id="txtfiltrar">
+            </div>
+            <br>
+            <table class="col s12 striped responsive-table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Trabalhando?</th>
+                        <th>Telefone</th>
+                        <th>Moradores</th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div id="modalExclusao" class="modal">
+        <div class="modal-content">
+            <h4>Confirmação de exclusão</h4>
+            <p>Deseja realmente excluir este item?</p>
+        </div>
+        <div class="modal-footer">
+            <input type="hidden" id="idexclusao">
+            <a href="#!" class="modal-close waves-effect waves-green btn">Não</a>
+            <a href="javascript:executarExclusao()" class="waves-effect waves-green btn red">Sim</a>
+        </div>
+    </div>
+    <br>
+
+    <!-- FOOTER  -->
+    <footer class="page-footer grey darken-4" style="position: relative;  bottom:0; left: 0; width: 100%;">
+        <div class="container" style="text-align: center; padding-bottom: 10px;">
+            © 2021 Desenvolvido por Nicolas Diniz
+        </div>
+    </footer>
+</body>
+
+<script src="js/ajax.js"></script>
+<script src="js/residente.js"></script>
+<script src="js/deslogar.js"></script>
+
+</html>

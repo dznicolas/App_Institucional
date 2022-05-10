@@ -1,0 +1,3 @@
+<?php
+    retornarStatus(verificarLogin(), ""); 
+?>
