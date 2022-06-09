@@ -1,4 +1,4 @@
-<p align="center">Sistema realizado para ser um aplicativo, composto por um Login e Crud(cadastrar, listar, editar e excluir ), possui varias funções utilizando o Javascript. Para visualizar o sistema eu utilizei o wampserver, para testar é necessário modificar alguns caminhos, pois foi criado com base no meu diretório.   </p> 
+<p align="center">Sistema que é composto por um Login e Crud(cadastrar, listar, editar e excluir). Foi um projeto realizado através do técnico que fiz, que tem o objetivo de cadastrar pessoas que precisam de ajuda habitacional, com base nos objetivos da ODS. Para visualizar o sistema eu utilizei o wampserver, para testar é necessário modificar alguns caminhos do diretório. </p> 
 
 <div align="center">
     <img src="https://user-images.githubusercontent.com/103971506/167535241-0482497b-7469-44c2-b7f8-088598ea2553.png" width="150px"> 
